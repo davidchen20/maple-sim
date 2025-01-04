@@ -55,7 +55,6 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import org.ironmaple.simulation.drivesims.COTS;
 import org.ironmaple.simulation.drivesims.configs.DriveTrainSimulationConfig;
-import org.ironmaple.simulation.drivesims.configs.SwerveModuleSimulationConfig;
 import org.littletonrobotics.junction.AutoLogOutput;
 import org.littletonrobotics.junction.Logger;
 
@@ -91,16 +90,12 @@ public class Drive extends SubsystemBase implements Vision.VisionConsumer {
             .withRobotMass(Kilograms.of(ROBOT_MASS_KG))
             .withCustomModuleTranslations(getModuleTranslations())
             .withGyro(COTS.ofPigeon2())
-            .withSwerveModule(new SwerveModuleSimulationConfig(
-                    DCMotor.getKrakenX60(1),
-                    DCMotor.getFalcon500(1),
-                    TunerConstants.FrontLeft.DriveMotorGearRatio,
-                    TunerConstants.FrontLeft.SteerMotorGearRatio,
-                    Volts.of(TunerConstants.FrontLeft.DriveFrictionVoltage),
-                    Volts.of(TunerConstants.FrontLeft.SteerFrictionVoltage),
-                    Inches.of(2),
-                    KilogramSquareMeters.of(TunerConstants.FrontLeft.SteerInertia),
-                    WHEEL_COF));
+            .withSwerveModule(COTS.ofMark4n( DCMotor.getKrakenX60(1),
+            DCMotor.getFalcon500(1),
+           
+            WHEEL_COF,
+            3)
+                   );
 
     static final Lock odometryLock = new ReentrantLock();
     private final GyroIO gyroIO;
