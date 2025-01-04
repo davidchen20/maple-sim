@@ -92,7 +92,6 @@ public class RobotContainer {
 
                  SimulatedArena.getInstance().resetFieldForAuto();
                 AIRobotInSimulation.startOpponentRobotSimulations();
-                AIRobotInSimulation.startAllianceRobotSimulations();
                 break;
 
             default:
@@ -171,7 +170,6 @@ public class RobotContainer {
 
         Logger.recordOutput("FieldSimulation/RobotPosition", driveSimulation.getSimulatedDriveTrainPose());
         Logger.recordOutput("FieldSimulation/OpponentRobotPositions", AIRobotInSimulation.getOpponentRobotPoses());
-        Logger.recordOutput("FieldSimulation/AllianceRobotPositions", AIRobotInSimulation.getAlliancePartnerRobotPoses());
         // Logger.recordOutput(
         //         "FieldSimulation/Notes", SimulatedArena.getInstance().getGamePiecesByTypeType("Note"));
     }

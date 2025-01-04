@@ -157,7 +157,6 @@ public class Robot extends LoggedRobot {
     @Override
     public void simulationInit() {
         AIRobotInSimulation.startOpponentRobotSimulations();
-        AIRobotInSimulation.startAllianceRobotSimulations();
         robotContainer.resetSimulation();
     }
 
