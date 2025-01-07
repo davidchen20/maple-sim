@@ -48,11 +48,12 @@ public class sigmasigmsboyArena extends SimulatedArena {
 
             super.addRectangularObstacle(Units.inchesToMeters(12), Units.inchesToMeters(12), new Pose2d(FIELD_WIDTH/2, FIELD_HEIGHT/2, new Rotation2d()));
            
-            super.addBorderLine(new Translation2d(4+0.5, 2.7), new Translation2d(3.4+0.5, 3.15));
-            super.addBorderLine(new Translation2d(3.4+0.5, 3.15), new Translation2d(3.4+0.5, 4));
-            super.addBorderLine(new Translation2d(3.4+0.5, 4), new Translation2d(4+0.5, 4.4));
-            super.addBorderLine(new Translation2d(4+0.5, 4.4), new Translation2d(4.8+0.5, 4));
-            super.addBorderLine(new Translation2d(4.8+0.5, 4), new Translation2d(4+0.5, 2.7));
+            super.addBorderLine(new Translation2d(4+0.5, 3), new Translation2d(3.7, 3.5));
+            super.addBorderLine(new Translation2d(3.7, 3.5), new Translation2d(3.7, 4.5));
+            super.addBorderLine(new Translation2d(3.7, 4.5), new Translation2d(4.5, 5));
+            super.addBorderLine(new Translation2d(4+0.5, 5), new Translation2d(5.3, 4.5));
+            super.addBorderLine(new Translation2d(5.3, 4.5), new Translation2d(5.3, 3.5));
+            super.addBorderLine(new Translation2d(5.3, 3.5), new Translation2d(4.5, 3));
 
            
             // // upper wall
